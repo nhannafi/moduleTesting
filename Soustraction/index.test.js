@@ -1,17 +1,17 @@
 const Soustraction = require('.');
 
-test('Soustrait 24 par 17 pour obtenir 7', () => {
+test('Subtract 24 by 17 to get 7', () => {
     expect(Soustraction(24, 17)).toBe(7);
 });
 
-test('Soustrait -24 par 17 pour obtenir -41', () => {
+test('Subtract -24 by 17 to get -41', () => {
     expect(Soustraction(-24, 17)).toBe(-41);
 });
 
-test('Soustrait 24 par -17 pour obtenir 41', () => {
+test('Subtract 24 by -17 to get 41', () => {
     expect(Soustraction(24, -17)).toBe(41);
 });
 
-test('Soustrait -24 par -17 pour obtenir -7', () => {
+test('Subtract -24 by -17 to get -7', () => {
     expect(Soustraction(-24, -17)).toBe(-7);
 });
