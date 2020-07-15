@@ -1,32 +1,25 @@
 const Division = require('.');
 const DividedByZeroError = require('../Errors/DividedByZeroError');
 
-/*
- * Tests en fonction des paramètres
- */
 
-test('Divise 25 par 5 pour obtenir 5', () => {
-    expect(Division(25, 5)).toBe(5);
+
+test('Divise 36 par 6 pour obtenir 6', () => {
+    expect(Division(36, 6)).toBe(6);
 });
 
-test('Divise -25 par 5 pour obtenir -5', () => {
-    expect(Division(-25, 5)).toBe(-5);
+test('Divise -36 par 6 pour obtenir -6', () => {
+    expect(Division(-36, 6)).toBe(-6);
 });
 
-test('Divise 25 par -5 pour obtenir -5', () => {
-    expect(Division(25, -5)).toBe(-5);
+test('Divise 36 par -6 pour obtenir -6', () => {
+    expect(Division(36, -6)).toBe(-6);
 });
 
-test('Divise -25 par -5 pour obtenir 5', () => {
-    expect(Division(-25, -5)).toBe(5);
+test('Divise -36 par -6 pour obtenir 6', () => {
+    expect(Division(-36, -6)).toBe(6);
 });
 
-/*
- * Les prochains tests utilisent une fonction anonyme au lieu d'utiliser une instance de Division directement afin
- * de recupérer les erreurs comme DividedByZeroError.
- */
-
-test('Divise un nombre positif par zero afin d\'obtenir une erreur.', () => {
+test('Divide a positive number by zero to get an error.', () => {
     expect(() => Division(Math.floor(Math.random() * 100) + 1, 0)).toThrow(DividedByZeroError);
 });
 
