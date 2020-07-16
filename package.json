@@ -1,7 +1,7 @@
 {
   "name": "calculatrice",
   "version": "1.0.0",
-  "description": "Exercice sur les tests",
+  "description": "Tps testing",
   "main": "main.js",
   "scripts": {
     "test": "jest"
