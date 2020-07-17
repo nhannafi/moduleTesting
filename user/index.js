@@ -1,5 +1,5 @@
 const UserValidator = require('../Validators/User');
-const UserValidatorError = require('../Error/UserValidatorError');
+const UserValidatorError = require('../Error/User/UserValidatorError');
 
 /**
  * @class User
@@ -13,19 +13,11 @@ class User {
      * @param params.nom
      * @param params.prenom
      * @param params.age
+     * @throws UserValidatorError
      */
     constructor(params) {
 
-        let validator;
-
-        try {
-            validator = new UserValidator(params);
-        }
-        catch (error) {
-            throw error;
-        }
-
-        this.validator = validator;
+        new UserValidator(params);
 
         const {
             email,
@@ -63,3 +55,4 @@ class User {
 }
 
 module.exports = User;
+

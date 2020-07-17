@@ -1,5 +1,5 @@
 /**
- * Error adress ùail invalid
+ * Error adress mail invalid
  * @class InvalidEmailError
  * @extends Error
  */
